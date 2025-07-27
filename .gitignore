@@ -1,0 +1,19 @@
+# Entornos virtuales
+venv/
+django-venv/
+
+# Archivos de Python
+__pycache__/
+*.py[cod]
+*.sqlite3
+
+# Archivos de configuración
+*.env
+
+# Archivos de VS Code u otros IDE
+.vscode/
+.idea/
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
