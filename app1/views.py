@@ -2,5 +2,9 @@ from django.shortcuts import render
 
 # Create your views here.
 from django.http import HttpResponse 
-def index(request): 
-    return HttpResponse("esto en el index de app1") 
+# agregamos este immport para poder usar HttpResponse
+
+
+
+def pagina_home(request): 
+    return HttpResponse("pagina home") 
