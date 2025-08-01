@@ -39,5 +39,5 @@ urlpatterns = [
 
     # path('', lambda request: redirect('/demo/')),
     path('', include('app1.urls')), 
-    path('admin/', admin.site.urls), 
+    path('admin/', admin.site.urls),    
 ] 
