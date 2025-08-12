@@ -12,6 +12,6 @@ urlpatterns = [
 
     path("showform/", views.showform, name="showform"), 
     path("getform/", views.getform, name="getform"),
-    
-    path("menuitems/<str:dish>/", views.menuitrems, name="menuitrems"),
+
+    path("menuitems/<str:dish>/", views.menuitrems, name="menuitrems"), 
 ]

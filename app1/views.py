@@ -69,7 +69,7 @@ def getform(request):
         name=request.POST['name'] 
     return HttpResponse("Name:{} UserID:{}".format(name, id)) 
 
-
+# http://127.0.0.1:8000/menuitems/arroz%20dulce/
 def menuitrems(request, dish):
     items ={
         'arroz dulce':'hecho con arroz y leche',
