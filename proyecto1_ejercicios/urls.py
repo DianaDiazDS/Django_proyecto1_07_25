@@ -34,10 +34,20 @@ from django.contrib import admin
 from django.urls import include, path 
 #importar include para poder incluir las urls de app1
 
+from . import views
+
 
 urlpatterns = [   
 
     # path('', lambda request: redirect('/demo/')),
-    path('', include('app1.urls')), 
+    path('', lambda request: redirect('app1:index')),  # Redirige a la vista index de app1
+    path('app1/', include('app1.urls', namespace='app1')),
+    path('app2/', include('app2.urls', namespace='app2')),
+
     path('admin/', admin.site.urls),    
 ] 
+
+# handler400= 'proyecto1_ejercicios.views.handler400'
+# handler403= 'proyecto1_ejercicios.views.handler403'
+handler404= 'proyecto1_ejercicios.views.handler404'
+# handler500= 'proyecto1_ejercicios.views.handler500'

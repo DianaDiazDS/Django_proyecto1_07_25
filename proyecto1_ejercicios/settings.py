@@ -24,9 +24,9 @@ SECRET_KEY = 'django-insecure-byrk#1)xmzz&!5+v(18-_j*u8sk=nlm*o@g9^g612+t$hd+jde
 
 # SECURITY WARNING: don't run with debug turned on in production!
 #traduce # WARNING DE SEGURIDAD: ¡no ejecutes con debug activado en producción!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
