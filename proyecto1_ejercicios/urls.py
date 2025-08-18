@@ -47,7 +47,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),    
 ] 
 
-# handler400= 'proyecto1_ejercicios.views.handler400'
-# handler403= 'proyecto1_ejercicios.views.handler403'
+handler400= 'proyecto1_ejercicios.views.handler400'
+handler403= 'proyecto1_ejercicios.views.handler403'
 handler404= 'proyecto1_ejercicios.views.handler404'
-# handler500= 'proyecto1_ejercicios.views.handler500'
+handler500= 'proyecto1_ejercicios.views.handler500'
