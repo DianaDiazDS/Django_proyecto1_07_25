@@ -1,0 +1,16 @@
+<form action="{% url 'app2:login' %}" method="post"> 
+    <!-- 
+    Este formulario envía los datos al servidor usando el método POST.
+    La URL de destino es "/getform/", donde el servidor procesará la información enviada.
+-->
+    {% csrf_token %} <!-- Protege contra ataques CSRF en formularios Django -->
+    <p>
+        Name: 
+        <input type="text" name="id"> <!-- Campo de texto para el nombre (el atributo name debería ser más descriptivo) -->
+    </p> 
+    <p>
+        UserID:
+        <input type="name" name="name"> <!-- Campo para el UserID (type="name" no es estándar, debería ser type="text") -->
+    </p> 
+    <input type="submit"> <!-- Botón para enviar el formulario -->
+</form>

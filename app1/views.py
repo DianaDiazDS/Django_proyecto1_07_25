@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 # Create your views here.
-from django.http import HttpResponse 
+from django.http import HttpResponse , HttpResponsePermanentRedirect
 # agregamos este immport para poder usar HttpResponse
 from datetime import datetime
 
@@ -81,7 +81,8 @@ def menuitrems(request, dish):
 
 
 
-
+def myview(request): 
+    return HttpResponsePermanentRedirect(reverse('demoapp1:login'))
 
 # from django.views import View 
 # class MyView(View): 
@@ -93,3 +94,9 @@ def menuitrems(request, dish):
 #         # <logic to process POST request> 
 #         return HttpResponse('response to POST request') 
 
+
+# def index2(request): 
+#     return render(request, "form2.html")
+
+def login(request): 
+    return render(request, "form2.html")
