@@ -8,3 +8,9 @@ class Menu(models.Model):
 
     def __str__(self):
         return f"{self.name} : {self.cuisine} - ${self.price}"
+
+class Person(models.Model): 
+    name = models.CharField(max_length=20) 
+    email = models.EmailField()
+    age = models.IntegerField(null=True)
+    phone = models.CharField(max_length=20) 
