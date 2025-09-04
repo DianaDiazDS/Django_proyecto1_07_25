@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>formulario</title>
+</head>
+<body>
+    
+    <form method="post">
+        {% csrf_token %}
+        {{ form_ejemplo_llamar.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+
+
+</body>
+</html>
