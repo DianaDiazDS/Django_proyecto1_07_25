@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>formulario de login</title>
+</head>
+<body>
+    
+
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form_para_BD.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+</html>

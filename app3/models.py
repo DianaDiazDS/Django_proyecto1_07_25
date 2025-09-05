@@ -11,3 +11,10 @@ class Menus(models.Model):
     #el primer atrobuto es la clase para que el modelo se conecte MenuCategory y la segunda es el tipo de relación
     def __str__(self):
         return f"{self.name} : {self.category_id.menu_category_name} - ${self.price}"
+
+class Logger(models.Model):
+    first_name = models.CharField(max_length=100)
+    last_name = models.CharField(max_length=100)
+    time_log = models.TimeField(help_text="Time log")
+    # reservation_time = models.DateField(auto_now=True)
+    

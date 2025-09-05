@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>formulario</title>
+    <title>formulario Tipos de datos</title>
 </head>
 <body>
     
-    <form method="post">
+    <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form_ejemplo_llamar.as_p }}
         <button type="submit">Submit</button>
     </form>
+
+    {% if mensaje %}
+        <p style="color:green;">{{ mensaje }}</p>
+    {% endif %}
 
 
 </body>

@@ -1,5 +1,7 @@
 from django import forms
 
+
+
 class DemoForm(forms.Form):
     name = forms.CharField(label='Your name', max_length=100, widget=forms.TextInput(attrs={'placeholder': 'Enter your full name'}))
     age = forms.IntegerField(
@@ -10,6 +12,7 @@ class DemoForm(forms.Form):
     date_reservation = forms.DateField(label='Reservation Date', widget=forms.DateInput(attrs={'type': 'date'}))
     email = forms.EmailField(label='Your email')
     agree_to_terms = forms.BooleanField(label='I agree to the terms and conditions')
+    upload = forms.FileField(label='Upload file', required=False)
 
     # Otros campos para probar:
     password = forms.CharField(label='Password', widget=forms.PasswordInput)
@@ -29,3 +32,8 @@ class DemoForm(forms.Form):
     )
 
 
+from .models import Logger
+class logForm(forms.ModelForm):
+    class Meta:
+        model = Logger
+        fields = '__all__'
