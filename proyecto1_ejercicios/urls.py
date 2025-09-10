@@ -44,7 +44,7 @@ urlpatterns = [
     path('app1/', include('app1.urls', namespace='app1')),
     path('app2/', include('app2.urls', namespace='app2')),
     path('app3/', include('app3.urls', namespace='app3')),
-
+    path('app4/', include('app4.urls', namespace='app4')),
 
     path('admin/', admin.site.urls),    
 ] 

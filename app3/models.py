@@ -17,4 +17,10 @@ class Logger(models.Model):
     last_name = models.CharField(max_length=100)
     time_log = models.TimeField(help_text="Time log")
     # reservation_time = models.DateField(auto_now=True)
-    
+
+
+
+from django.db import models
+
+class User(models.Model):
+    name = models.CharField(max_length=100)
