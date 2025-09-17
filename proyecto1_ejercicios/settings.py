@@ -69,6 +69,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
+            'environment':['app4.jinja2.environment']
         },
     },
 ]
@@ -79,23 +80,30 @@ WSGI_APPLICATION = 'proyecto1_ejercicios.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
-# DATABASES = {   
-#     'default': {   
-#         'ENGINE': 'django.db.backends.mysql',   
-#         'NAME': 'djangotest',   
-#         'USER': 'root',   
-#         'PASSWORD': 'password',   
-#         'HOST': '127.0.0.1',   
-#         'PORT': '3306',            
-#     }   
-# } 
+DATABASES = {   
+    'default': {   
+        'ENGINE': 'django.db.backends.mysql',   
+        'NAME': 'databaseDjango',   
+        'USER': 'diana',   
+        'PASSWORD': 'admin',   
+        'HOST': '127.0.0.1',   
+        'PORT': '3306',   
+        'OPTIONS':{
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+        }         
+    }   
+} 
+
+# OPTIONS = {
+#     'READ_DEFAULT_FILE': '/path/to/connection.cnf',
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
