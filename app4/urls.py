@@ -7,4 +7,8 @@ urlpatterns = [
     path('sinPermiso/', views.myview3, name='myview3'),
     path("change-category/", views.change_ctg, name="change_category"),
     path("reservations/", views.ReservationListView.as_view(), name="reservation_list"),
+
+    path("menu/", views.menu, name="menu"),
+    path("about/", views.about, name="about"),
+
 ]

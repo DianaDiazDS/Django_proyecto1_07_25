@@ -1,5 +1,7 @@
 from django.http import HttpResponse, HttpResponseNotAllowed
-from django.views import View 
+from django.views import View
+from django.shortcuts import render
+
 
 
 # def handler404(request, exception):
@@ -40,3 +42,6 @@ class Custom404View(View):
 def handler404(request, exception):
     view = Custom404View.as_view()
     return view(request, exception=exception)
+
+
+

@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -61,18 +62,24 @@ ROOT_URLCONF = 'proyecto1_ejercicios.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ["templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-            ],
-            'environment':['app4.jinja2.environment']
+                 'django.template.context_processors.static',
+            ]
         },
     },
 ]
+
+# STATICFILES_DIRS = [
+#     BASE_DIR / "app4",
+# ]
+
+
 
 WSGI_APPLICATION = 'proyecto1_ejercicios.wsgi.application'
 
@@ -87,23 +94,25 @@ WSGI_APPLICATION = 'proyecto1_ejercicios.wsgi.application'
 #     }
 # }
 
-DATABASES = {   
-    'default': {   
-        'ENGINE': 'django.db.backends.mysql',   
-        'NAME': 'databaseDjango',   
-        'USER': 'diana',   
-        'PASSWORD': 'admin',   
-        'HOST': '127.0.0.1',   
-        'PORT': '3306',   
-        'OPTIONS':{
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
-        }         
-    }   
-} 
 
-# OPTIONS = {
-#     'READ_DEFAULT_FILE': '/path/to/connection.cnf',
-# }
+
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.getenv("dbname"),
+        'USER': os.getenv("user"),
+        'PASSWORD': os.getenv("password"),
+        'HOST': os.getenv("host"),
+        'PORT': os.getenv("port"),
+    }
+}
+
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
