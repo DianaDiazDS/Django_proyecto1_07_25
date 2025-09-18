@@ -66,19 +66,21 @@ TEMPLATES = [
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
+                'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                 'django.template.context_processors.static',
             ]
         },
     },
 ]
 
-# STATICFILES_DIRS = [
-#     BASE_DIR / "app4",
-# ]
 
+# Default primary key field type
+# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
+STATICFILES_DIRS = [
+    'myapp/static',
+]
 
 
 WSGI_APPLICATION = 'proyecto1_ejercicios.wsgi.application'
@@ -94,6 +96,23 @@ WSGI_APPLICATION = 'proyecto1_ejercicios.wsgi.application'
 #     }
 # }
 
+
+# OPTIONS = {
+#     'READ_DEFAULT_FILE': '/path/to/connection.cnf',
+# }
+# DATABASES = {   
+#     'default': {   
+#         'ENGINE': 'django.db.backends.mysql',   
+#         'NAME': 'databaseDjango',   
+#         'USER': 'diana',   
+#         'PASSWORD': 'admin',   
+#         'HOST': '127.0.0.1',   
+#         'PORT': '3306',   
+#         'OPTIONS':{
+#             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+#         }         
+#     }   
+# } 
 
 
 import os
