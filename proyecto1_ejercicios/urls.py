@@ -36,7 +36,7 @@ from django.urls import include, path
 
 from . import views
 
-
+app_name='app4' 
 urlpatterns = [   
 
     # path('', lambda request: redirect('/demo/')),
@@ -46,6 +46,7 @@ urlpatterns = [
     path('app3/', include('app3.urls', namespace='app3')),
     path('app4/', include('app4.urls', namespace='app4')),
     path('app5/', include('app5.urls', namespace='app5')),
+    path('restaurant/', include('restaurant.urls', namespace='restaurant')),
 
 
     path('admin/', admin.site.urls),    
